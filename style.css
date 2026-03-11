@@ -1,0 +1,10 @@
+:root { --main-gold: #FFD700; --bg-black: #0a0a0a; --theme-color: #FFD700; }
+body { margin: 0; background: var(--bg-black); color: white; font-family: sans-serif; overflow: hidden; }
+#splash { position: fixed; inset: 0; background: #000; z-index: 3000; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: 0.8s; }
+.splash-title { color: var(--theme-color); font-size: 2rem; font-weight: 800; letter-spacing: 3px; }
+#sidebar { position: fixed; left: -280px; top: 0; width: 260px; height: 100%; background: #000; z-index: 2500; transition: 0.3s; padding: 20px; border-right: 1px solid rgba(255,215,0,0.2); }
+.side-item { padding: 12px; color: #bbb; cursor: pointer; border-bottom: 1px solid #111; }
+.screen { display: none; position: fixed; inset: 0; background: #0a0a0a; z-index: 2000; padding: 20px; flex-direction: column; }
+.in { width: 100%; background: #111; border: 1px solid #222; color: white; padding: 12px; margin-bottom: 15px; border-radius: 8px; }
+.save-btn { background: var(--theme-color); padding: 15px; border-radius: 8px; font-weight: bold; width: 100%; border: none; }
+.fab { position: fixed; bottom: 25px; right: 25px; width: 55px; height: 55px; background: var(--theme-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: black; font-weight: bold; }
