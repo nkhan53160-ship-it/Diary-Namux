@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NAMUX DIARY PRO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="splash">
+        <h1 class="splash-title">NAMUX DIARY</h1>
+        <div class="splash-footer">MADE BY NAMUX</div>
+    </div>
+
+    <div id="home">
+        <div class="top-bar">
+            <div class="menu-btn" onclick="toggleSide(true)">☰</div>
+            <div class="logo">NAMUX DIARY</div>
+            <div style="width:24px"></div>
+        </div>
+        <div class="search-area">
+            <input type="text" id="search" class="search-input" placeholder="Search memories..." onkeyup="renderNotes()">
+        </div>
+        <div id="notes-display"></div>
+        <div class="fab" onclick="showScreen('write-screen')">+</div>
+    </div>
+
+    <div id="overlay" onclick="toggleSide(false)"></div>
+    <div id="sidebar">
+        <div class="side-header">
+            <img src="https://via.placeholder.com/100" class="user-pic">
+            <h4 id="user-name">Nasir Khan</h4>
+        </div>
+        <div class="side-item" onclick="showScreen('profile-screen')">👤 Profile</div>
+        <div class="side-item" onclick="showScreen('theme-screen')">🎨 Themes</div>
+        <div id="vault-link" class="side-item">🔒 Private Vault</div>
+        <div class="side-item" onclick="exportData()">💾 Backup</div>
+        <div class="side-item" onclick="showScreen('about-screen')">⭐ About</div>
+    </div>
+
+    <div id="write-screen" class="screen">
+        <div class="header-back" onclick="hideScreens()">← CANCEL</div>
+        <input type="text" id="title" class="in" placeholder="Note Title...">
+        <textarea id="body" class="in" rows="10" placeholder="Likhiye Nasir bhai..."></textarea>
+        <button class="save-btn" onclick="saveNote()">SAVE</button>
+    </div>
+
+    <div id="theme-screen" class="screen">
+        <div class="header-back" onclick="hideScreens()">← BACK</div>
+        <div class="theme-box">
+            <div class="t-circle" style="background:#FFD700;" onclick="changeTheme('#FFD700')"></div>
+            <div class="t-circle" style="background:#ff4444;" onclick="changeTheme('#ff4444')"></div>
+            <div class="t-circle" style="background:#4488ff;" onclick="changeTheme('#4488ff')"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
